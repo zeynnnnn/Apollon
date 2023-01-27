@@ -1,0 +1,32 @@
+package src;
+import java.awt.*;
+import javax.swing.*;
+public class Player{
+ 
+ // Properties
+ String name;
+ ImageIcon image;
+ // Constructors
+ public Player() {
+ 
+ }
+ // Methods
+ public void setName( String givenName) {
+  name = givenName;
+ }
+ 
+ public String getName() {
+  return name; 
+ }
+ 
+ public void setImage(ImageIcon imageIcon)
+   {
+     image = imageIcon;
+   }
+   
+ public ImageIcon getImage()
+   {
+       return image ;
+   }
+ 
+}

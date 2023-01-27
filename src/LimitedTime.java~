@@ -1,0 +1,43 @@
+package src;
+/* 
+ * @author Zeynep Sonkaya
+ * @version 1.00 01.05.2017
+ * */
+public class LimitedTime {
+    //properties
+      int noOfHittenTarget;
+      int time;
+      public LimitedTime(int time, Arrow arrow ,Environment environment,int vInit) 
+   { 
+      super(int time, Arrow arrow ,Environment environment,int vInit);
+      noOfHittenTarget =0;
+      time =1000;
+   }
+
+//Methods
+
+      public boolean isGameOver()
+      {
+         boolean over = false;
+      if (time <0) 
+         over = true;
+         return over;
+      }
+
+      public int getHittedTargetNumber()
+      {
+         return   noOfHittenTarget;
+      }
+
+      public void increaseHittedTargetNumber(int n){
+           noOfHittenTarget++;
+      }
+   
+      public void decreaseTime()
+      {
+         time --;
+      }
+      public int getTime(){
+         return time;
+      }
+}

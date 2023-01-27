@@ -1,0 +1,58 @@
+package src;
+/* 
+ * @author Anýl
+ * @version 1.00 01.05.2017
+ * */
+import java.awt.*;
+import javax.swing.*;
+public class Arrow
+{
+   private int x1;
+   private int y1;
+   private int x2 ;
+   private int y2 ;
+   ImageIcon image;
+   private int mass ;
+
+   public Arrow()
+   {
+     
+   }
+   public int getX1()
+   {
+      return x1;
+   }
+   public int getX2()
+   {
+      return x2;
+   }
+   public int getY1()
+   {
+      return y1;
+   }
+   public int getY2()
+   {
+      return y2;
+   }
+   public int getLength()
+   {
+      return (int)Math.sqrt(((getX2()*getX2())-(getX1()*getX1()))+(getY2()*getY2())-(getY1()*getY1()));
+   }
+   public void setMass(int mass)
+   { 
+      this.mass = mass;
+   }
+   public int getMass()
+   {
+      return mass;
+   }
+   public void setImage(ImageIcon image)
+   {
+      image = new ImageIcon(getClass().getResource("ok.jpg"));
+   }
+   public ImageIcon getImage()
+   {
+      return image ;
+   }
+
+}
